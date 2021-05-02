@@ -1,24 +1,5 @@
 # rate
 
-## Project setup
-```
-npm install
-```
-
-### Compiles and hot-reloads for development
-```
-npm run serve
-```
-
-### Compiles and minifies for production
-```
-npm run build
-```
-
-### Lints and fixes files
-```
-npm run lint
-```
-
-### Customize configuration
-See [Configuration Reference](https://cli.vuejs.org/config/).
+некоторые пояснения:
+1) Имя и qr_code у лекции хранится в хранилище lections
+2) Оценки лекции хранятся в хранилище lection_(id lection)
