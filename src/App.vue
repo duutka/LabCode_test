@@ -2,6 +2,7 @@
   <div id="app">
     <nav id="nav">
       <router-link to="/">Home</router-link>
+      <button @click="generateCookie">Сгенерировать куки</button>
     </nav>
     <router-view />
   </div>
@@ -9,6 +10,16 @@
 <script>
 export default {
   name: 'App',
+  mounted(){
+    //Если куки не сгенерировано, то генерим
+    if(document.cookie=="") this.generateCookie();
+  },
+
+  methods:{
+    generateCookie(){
+      document.cookie=Math.random();
+    }
+  }
 }
 </script>
 <style>
@@ -26,15 +37,21 @@ export default {
   background-color: black;
 }
 
-#nav > a{
+#nav > a,
+#nav > button{
   text-decoration: none;
-  color:white;
+  color: white;
   font-size: 20px;
   padding: 20px 20px;
+  background: black;
+  border: black;
 }
 
 #nav > a:hover,
-#nav > a:focus{
+#nav > a:focus,
+#nav > button:hover,
+#nav > button:focus{
   color:#c3c3c3;
+  cursor: pointer;
 }
 </style>
